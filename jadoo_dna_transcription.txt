@@ -1,19 +1,32 @@
 '''
+
 # Sample code to perform I/O:
 
+
+
 name = input()                  # Reading input from STDIN
+
 print('Hi, %s.' % name)         # Writing output to STDOUT
 
+
+
 # Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+
 '''
+
 #G --> C
+
 #C --> G
+
 #T --> A
+
 #A --> U 
+
 # Write your code here
 myList=list(map(str,input()))
 newList=[]
 for n,i in enumerate(myList):
+
     if i=='G':
         newList.append('C')
     elif i=='C':
@@ -23,6 +36,10 @@ for n,i in enumerate(myList):
     elif i=='A':
         newList.append('U')
     else:
-        print("Invalid Input As A String")
+        #Invalid Input as a string.
+        del newList[:]
+        newList.append("Invalid Input")
+        break
+
 #Printing the List Here
-print(''.join(newList))        
+print(''.join(newList))

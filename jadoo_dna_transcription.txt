@@ -11,21 +11,18 @@ print('Hi, %s.' % name)         # Writing output to STDOUT
 #T --> A
 #A --> U 
 # Write your code here
-myList=list(map(str,input().split()))
+myList=list(map(str,input()))
+newList=[]
 for n,i in enumerate(myList):
     if i=='G':
-        myList[n]='C'
-        print(myList[n])
+        newList.append('C')
     elif i=='C':
-        myList[n]='G'
-        print(myList[n])
+        newList.append('G')
     elif i=='T':
-        myList[n]='A'
-        print(myList[n])
+        newList.append('A')
     elif i=='A':
-        myList[n]='T'
-        print(myList[n])
+        newList.append('U')
     else:
         print("Invalid Input As A String")
 #Printing the List Here
-        
+print(''.join(newList))        
